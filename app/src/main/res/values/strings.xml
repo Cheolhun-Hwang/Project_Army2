@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Project_army</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="sign_in">로그인</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="qa_menu">이용문의</string>
+    <string name="settings_menu">설정</string>
+    <string name="sign_out">로그아웃</string>
+
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

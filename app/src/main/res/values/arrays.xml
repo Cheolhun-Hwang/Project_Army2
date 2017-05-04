@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="hierarchy">
+        <item>All</item>
+        <item>이등병 이상</item>
+        <item>일병 이상</item>
+        <item>상병 이상</item>
+        <item>병장 이상</item>
+        <item>하사 이상</item>
+        <item>중사 이상</item>
+        <item>상사 이상</item>
+        <item>소위 이상</item>
+        <item>중위 이상</item>
+        <item>대위 이상</item>
+    </string-array>
+</resources>

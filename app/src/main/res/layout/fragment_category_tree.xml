@@ -1,0 +1,68 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hch.qewqs.project_army.CategoryTreeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/CategoryThreeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="군인 퀴즈"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="81dp"
+            android:layout_marginLeft="101dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <TextView
+            android:id="@+id/CategoryThreeHowtoPlay"
+            android:layout_width="312dp"
+            android:layout_height="95dp"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="42dp"
+            android:text="제한시간 15초 이내에 10문제의 퀴즈를 맞추게 됩니다. 결과에 따른 등급이 배정됩니다. 등급은 군인증을 대신할 차선책으로 이후 등급에 따른 게시판 댓글 작성 여부가 나뉘게 됩니다."
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CategoryThreeTitle"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.2" />
+
+        <Button
+            android:id="@+id/categoryThreeStartGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="16dp"
+            android:text="시작"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/categoryThreeWarning"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <TextView
+            android:id="@+id/categoryThreeWarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="88dp"
+            android:text="시작 버튼을 누르면 바로 시작됩니다."
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CategoryThreeHowtoPlay"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" />
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>
