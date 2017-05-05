@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Project_army</string>
+    <string name="app_name">군인 일로카</string>
 
     <string name="action_settings">Settings</string>
 
@@ -13,5 +13,13 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="First">본인의 적성에 맞는 특기를\n 알아보는 카테고리입니다.\n
+        (아래 공지사항 확인하기)</string>
+
+    <string name="Second">※공지사항 주의!</string>
+    <string name="Notice">공지사항을 꼭 읽어주시기 바랍니다</string>
+    <string name="Question">Question?\n 자신의 신체검사 등급을 알고 계십니까?</string>
+    <string name="QuestionYes">자신의 신체검사 등급을 체크하세요.</string>
 
 </resources>

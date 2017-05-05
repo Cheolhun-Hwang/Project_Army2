@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Question"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:textSize="20dp"
+            android:text="@string/Question"/>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="(아직 신검을 안받으신 경우\n 정보를 통한 예상 신체등급으로 진행합니다.)" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <RadioButton
+                android:id="@+id/radio0"
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예" />
+            <RadioButton
+                android:id="@+id/radio1"
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아니오" />
+
+
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/ifyes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/inputBody"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/시력좌"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="좌"
+                android:textSize="15dp"
+                android:gravity="center"
+                app:layout_constraintRight_toLeftOf="@+id/inputSightR"
+                android:layout_marginRight="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/inputSightL" />
+
+            <EditText
+                android:id="@+id/inputWeight"
+                android:layout_width="188dp"
+                android:layout_height="38dp"
+                android:ems="10"
+                android:inputType="text"
+                app:layout_constraintLeft_toRightOf="@+id/몸무게"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/inputHeight"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/몸무게"
+                android:layout_width="84dp"
+                android:layout_height="44dp"
+                android:gravity="center_horizontal"
+                android:text="몸무게"
+                android:textSize="20dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/inputWeight"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/시력"
+                android:layout_width="84dp"
+                android:layout_height="44dp"
+                android:gravity="center_horizontal"
+                android:text="시력"
+                android:textSize="20dp"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/inputSightL"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/몸무게" />
+
+            <TextView
+                android:id="@+id/키"
+                android:layout_width="84dp"
+                android:layout_height="44dp"
+                android:gravity="center_horizontal"
+                android:text="키"
+                android:textSize="20dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/inputHeight"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <EditText
+                android:id="@+id/inputHeight"
+                android:layout_width="188dp"
+                android:layout_height="38dp"
+                android:ems="10"
+                android:inputType="text"
+                app:layout_constraintLeft_toRightOf="@+id/키"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/제목" />
+
+            <TextView
+                android:id="@+id/cm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cm"
+                android:textSize="15dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/inputHeight"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/inputHeight"
+                android:layout_marginLeft="8dp" />
+
+            <TextView
+                android:id="@+id/kg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kg"
+                app:layout_constraintBaseline_toBaselineOf="@+id/inputWeight"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/inputWeight"
+                android:layout_marginLeft="8dp" />
+
+            <TextView
+                android:id="@+id/우"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="우"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_marginRight="38dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@+id/inputSightR" />
+
+            <EditText
+                android:id="@+id/inputSightR"
+                android:layout_width="68dp"
+                android:layout_height="44dp"
+                android:ems="10"
+                android:inputType="text"
+                app:layout_constraintRight_toLeftOf="@+id/우"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/inputWeight" />
+
+            <EditText
+                android:id="@+id/inputSightL"
+                android:layout_width="68dp"
+                android:layout_height="44dp"
+                android:ems="10"
+                android:inputType="text"
+                app:layout_constraintRight_toLeftOf="@+id/시력좌"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/inputWeight" />
+
+            <TextView
+                android:id="@+id/제목"
+                android:layout_width="256dp"
+                android:layout_height="59dp"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="임의로 신체등급 구하기"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <Button
+                android:id="@+id/getResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="확인하기"
+                android:textSize="30dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputSightL" />
+        </android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/bodyCheck"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_gravity="center"
+                android:textSize="25dp"
+                android:text="자신의 신체검사 등급을 체크하세요"/>
+
+            <RadioGroup
+                android:id="@+id/radioBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+                <RadioButton
+                    android:id="@+id/body1"
+                    android:padding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    />
+                <RadioButton
+                    android:id="@+id/body2"
+                    android:padding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    />
+                <RadioButton
+                    android:padding="8dp"
+                    android:id="@+id/body3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    />
+                <RadioButton
+                    android:id="@+id/body4"
+                    android:padding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    />
+                <RadioButton
+                    android:id="@+id/body5"
+                    android:padding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    />
+                <RadioButton
+                    android:id="@+id/body6"
+                    android:padding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6"
+                    />
+            </RadioGroup>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "다음으로"
+                android:id="@+id/goNext"
+                android:onClick="onClick_toNext"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView >

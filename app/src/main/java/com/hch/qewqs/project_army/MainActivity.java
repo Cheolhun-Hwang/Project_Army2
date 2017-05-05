@@ -42,8 +42,9 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
+public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener,CategoryMajorFragement.onMyListener {
 
     private String parsonalCode;
 
@@ -65,6 +66,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     private boolean islogin = false;
 
     Bundle arg = null;
+    ///////////////////////////////////////////
+    static Specialist specialist;
+    CategorySpecialFragement  categorySepcial;
+    CategoryMajorFragement categoryMajor;
+    ArrayList<Storage> storages;
+    Bundle bundle;
 
     ///////////////////////////////////////// 생명주기에 맞는 실행을 위해 여기에 정의 /////////////////////////////////////////////////////////
     @Override
@@ -86,6 +93,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
         mUsername = ANONYMOUS;
         parsonalCode = "";
+
+
+        ////////////////////////
+        categoryMajor = new CategoryMajorFragement();
+        categorySepcial = new CategorySpecialFragement();
+        specialist = new Specialist();
+        ////////////////////////
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -194,11 +208,18 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     }
 
     public void onClick_Category_One() {
-        Toast.makeText(MainActivity.this, "Category_One.", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(MainActivity.this, "Category_One.", Toast.LENGTH_SHORT).show();
+        fragments = new CategoryOneFragement();
+        manager.beginTransaction().replace(R.id.content_main, fragments).commit();
     }
 
     public void onClick_Category_Two() {
-        Toast.makeText(MainActivity.this, "Category_Two.", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(MainActivity.this, "Category_Two.", Toast.LENGTH_SHORT).show();
+        fragments = new CategoryTwoFragement();
+        bundle = new Bundle();
+        bundle.putSerializable("Storages",storages);
+        fragments.setArguments(bundle);
+        manager.beginTransaction().replace(R.id.content_main, fragments).commit();
     }
 
     public void onClick_Category_Three() {
@@ -389,5 +410,21 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             e.printStackTrace();
         }
     }
+
+    public void category_one_change(int index){
+        if(index == 1){
+            manager.beginTransaction().replace(R.id.content_main, categorySepcial).commit();
+        }
+        if(index==2){
+            manager.beginTransaction().replace(R.id.content_main, categoryMajor).commit();
+        }
+
+    }
+
+    @Override
+    public void onRecieveData(ArrayList<Storage> data) {
+        this.storages = data;
+    }
+
 }
 
